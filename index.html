@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alice in Slapland</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="game.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Pacifico" rel="stylesheet">
+</head>
+
+<body class="center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center bg-1 white-text pad">
+                <h1>"Alice in Slapland"</h1>
+                <p>Pick an action (blue) then select a Tea to drink (yellow)!</p>
+                <p>Each action has strange effects, and each Tea has a different madness level. You have 10 cups of tea.</p>
+                <p>It's time to see just how Mad you can be!</p>
+            </div>
+            <div class="col-md-6 text-center white-text">
+                <header class="bg-1">
+                    <span>Name:
+                        <span id="name"> -- </span>
+                    </span>
+                    <span>Madness Level:
+                        <span id="madness">--</span>
+                    </span>
+                    <span>Cups of Tea:
+                        <span id="cups">--</span>
+                    </span>
+                </header>
+                <img src="alice.png" class="alice flex pad-top2">
+            </div>
+
+            <div class="col-md-6 text-center white-text">
+                <header class="bg-1">
+                    Name: 'The Mad Hatter' Madness Level: 9999 Cups of Tea:???
+                </header>
+                <img src="hatter.png" class="hatter">
+            </div>
+
+            <div class="col-md-12 flex2">
+
+                <button onclick="app.controllers.SlapController.giveItem('pour')" class="btn btn-primary pad" id="button-active">Pour a Cup</button>
+                <button onclick="app.controllers.SlapController.giveItem('shake')" class="btn btn-primary pad" id="button-active2">Shake Hands</button>
+                <button onclick="app.controllers.SlapController.giveItem('move')" class="btn btn-primary pad" id="button-active3">Move Down</button>
+                <button onclick="app.controllers.SlapController.tea('emTea')" class="btn btn-warning pad" id="button-active4">Drink "Em Tea"</button>
+                <button onclick="app.controllers.SlapController.tea('parrTea')" class="btn btn-warning pad" id="button-active5">Drink "Parr Tea"</button>
+                <button onclick="app.controllers.SlapController.tea('inSannaTea')" class="btn btn-warning pad" id="button-active6"> Drink "In Sanna Tea"</button>
+
+
+            </div>
+            <div class="col-md-12 flex2">
+            </div>
+
+
+            <div class="col-md-12 bg-1 flex-apart text-center">
+                <img src="logo.png" class="logo">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="pad">Madness Chart:</h4>
+                        <p>0-10: Perfectly Sane</p>
+                        <p>11-50: Slightly Mad</p>
+                        <p>51-150: Approaching Pure Madness</p>
+                        <p>151-1000: Absolutely Mad</p>
+                        <p>1001-5000: Mad Mad Mad</p>
+                        <p>5001-10,000: Mad as a Hatter</p>
+                        <p>10,001-20,000+: The Maddest of them all!</p>
+                    </div>
+                </div>
+                <button onclick="app.controllers.SlapController.reset()" class="btn btn-danger pad">Try Again!</button>
+            </div>
+        </div>
+    </div>
+    <script src="slap-service.js"></script>
+    <script src="slap-controller.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
